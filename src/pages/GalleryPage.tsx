@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, X } from "lucide-react";
-import { galleryPhotos } from "@/lib/data";
+import { ExternalLink, X } from "lucide-react";
+import { galleryPhotos, googleDriveGalleryUrl } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
 import BottomNav from "@/components/BottomNav";
 
@@ -14,8 +14,11 @@ const GalleryPage = () => {
         <div className="px-6 pt-14 max-w-lg mx-auto">
           <div className="flex items-center justify-between mb-6">
             <h1 className="font-display text-3xl font-medium text-foreground">Gallery</h1>
-            <button className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center">
-              <Plus size={18} strokeWidth={1.5} />
+            <button
+              onClick={() => window.open(googleDriveGalleryUrl, "_blank")}
+              className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center"
+            >
+              <ExternalLink size={18} strokeWidth={1.5} />
             </button>
           </div>
 
@@ -44,8 +47,12 @@ const GalleryPage = () => {
             ))}
           </div>
 
-          <button className="w-full mt-6 py-4 rounded-2xl bg-card shadow-paper text-sm text-muted-foreground font-sans font-semibold uppercase tracking-[0.1em]">
-            Load More
+          <button
+            onClick={() => window.open(googleDriveGalleryUrl, "_blank")}
+            className="w-full mt-6 py-4 rounded-2xl bg-card shadow-paper text-sm text-muted-foreground font-sans font-semibold uppercase tracking-[0.1em] flex items-center justify-center gap-2"
+          >
+            <ExternalLink size={14} strokeWidth={1.5} />
+            View All Photos on Drive
           </button>
         </div>
 

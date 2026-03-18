@@ -2,6 +2,8 @@ import haldiImg from "@/assets/event-haldi.jpg";
 import mehendiImg from "@/assets/event-mehendi.jpg";
 import weddingImg from "@/assets/event-wedding.jpg";
 import receptionImg from "@/assets/event-reception.jpg";
+import varmalaImg from "@/assets/event-varmala.jpg";
+import ringCeremonyImg from "@/assets/event-ring-ceremony.jpg";
 
 export interface WeddingEvent {
   id: string;
@@ -34,6 +36,8 @@ export interface CoupleStoryItem {
 
 export const guestName = "Sarah";
 export const coupleName = "Riddhi & Shubham";
+export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xIWkmIG0L9mAvU9aGxuxoX-RCZylWnmm?usp=sharing";
+
 export const weddingDate = new Date("2026-12-05T16:00:00");
 
 const venueMapUrl = "https://www.google.com/maps/dir//Uplakshy+The+Banquet+%26+Lawn,+VIP+estate,+Shankar+Nagar,+Raipur,+Chhattisgarh+492014/@13.0279053,77.6405022,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a28dd4b60b2ad35:0xfcb6f5a3753f78ba!2m2!1d81.6772!2d21.2630389?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D";
@@ -65,7 +69,7 @@ export const events: WeddingEvent[] = [
     venueAddress,
     dressCode: "Traditional / Semi-Formal",
     description: "The auspicious exchange of rings, marking the official engagement of the couple. A beautiful moment of commitment surrounded by family and friends.",
-    image: haldiImg,
+    image: ringCeremonyImg,
     category: "all",
     mapUrl: venueMapUrl,
     meal: "Lunch",
@@ -107,7 +111,7 @@ export const events: WeddingEvent[] = [
     venueAddress,
     dressCode: "Formal Indian / Traditional",
     description: "The grand Varmala ceremony — the exchange of flower garlands between the bride and groom, symbolizing their acceptance of each other. A joyous and celebratory moment filled with music and excitement.",
-    image: receptionImg,
+    image: varmalaImg,
     category: "all",
     mapUrl: venueMapUrl,
   },
@@ -128,16 +132,18 @@ export const events: WeddingEvent[] = [
 ];
 
 export const coupleStory: CoupleStoryItem[] = [
-  { year: "2019", title: "First Meeting", description: "A chance encounter at a friend's gallery opening in Mumbai. Rohan spilled his coffee, Ananya handed him a napkin — and the rest is history." },
-  { year: "2020", title: "First Date", description: "A quiet dinner at a rooftop restaurant turned into a six-hour conversation that ended only when the restaurant closed." },
-  { year: "2021", title: "Adventures Together", description: "From backpacking through Rajasthan to quiet weekends reading in cafés, they discovered they were each other's favorite adventure." },
-  { year: "2023", title: "The Proposal", description: "Under a canopy of fairy lights in their favorite garden, Rohan got down on one knee. She said yes before he finished the question." },
-  { year: "2026", title: "Forever Begins", description: "And now, surrounded by the people they love most, they begin the greatest chapter of all." },
+  { year: "20XX", title: "How We Met", description: "Write your story here..." },
+  { year: "20XX", title: "Our First Date", description: "Write your story here..." },
+  { year: "20XX", title: "The Journey Together", description: "Write your story here..." },
+  { year: "20XX", title: "The Proposal", description: "Write your story here..." },
+  { year: "2026", title: "Forever Begins", description: "And now, surrounded by the people we love most, we begin the greatest chapter of all." },
 ];
 
 export const galleryPhotos: GalleryPhoto[] = [
-  { id: "1", src: haldiImg, caption: "Pre-wedding celebrations" },
-  { id: "2", src: mehendiImg, caption: "Mehendi preparations" },
-  { id: "3", src: weddingImg, caption: "The venue awaits" },
-  { id: "4", src: receptionImg, caption: "Reception setup" },
+  { id: "1", src: haldiImg, caption: "Haldi celebrations" },
+  { id: "2", src: mehendiImg, caption: "Mehendi & Sangeet" },
+  { id: "3", src: weddingImg, caption: "Wedding ceremony" },
+  { id: "4", src: varmalaImg, caption: "Varmala" },
+  { id: "5", src: ringCeremonyImg, caption: "Ring ceremony" },
+  { id: "6", src: receptionImg, caption: "Reception" },
 ];
