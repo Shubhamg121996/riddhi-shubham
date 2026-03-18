@@ -34,7 +34,7 @@ const EventDetailPage = () => {
             transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="inline-block bg-primary text-primary-foreground text-[10px] uppercase tracking-[0.15em] font-semibold px-4 py-1.5 rounded-full mb-4">
-              {event.dressCode}
+              Attire: {event.dressCode}
             </span>
 
             <h1 className="font-display text-4xl font-medium text-foreground mb-3">

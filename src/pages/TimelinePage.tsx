@@ -82,7 +82,7 @@ const TimelinePage = () => {
                       </span>
                     </div>
                     <span className="inline-block bg-muted text-muted-foreground text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1 rounded-full">
-                      {event.dressCode}
+                      Attire: {event.dressCode}
                     </span>
                   </div>
                 </div>
