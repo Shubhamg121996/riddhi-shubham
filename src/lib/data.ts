@@ -109,7 +109,7 @@ export const events: WeddingEvent[] = [
     venueAddress,
     dressCode: "Formal Indian / Traditional",
     description: "The grand Varmala ceremony — the exchange of flower garlands between the bride and groom, symbolizing their acceptance of each other. A joyous and celebratory moment filled with music and excitement.",
-    image: receptionImg,
+    image: varmalaImg,
     category: "all",
     mapUrl: venueMapUrl,
   },
