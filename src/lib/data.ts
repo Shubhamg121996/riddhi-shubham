@@ -2,6 +2,8 @@ import haldiImg from "@/assets/event-haldi.jpg";
 import mehendiImg from "@/assets/event-mehendi.jpg";
 import weddingImg from "@/assets/event-wedding.jpg";
 import receptionImg from "@/assets/event-reception.jpg";
+import varmalaImg from "@/assets/event-varmala.jpg";
+import ringCeremonyImg from "@/assets/event-ring-ceremony.jpg";
 
 export interface WeddingEvent {
   id: string;
