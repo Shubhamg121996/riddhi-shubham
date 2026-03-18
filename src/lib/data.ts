@@ -32,7 +32,7 @@ export interface CoupleStoryItem {
 }
 
 export const guestName = "Sarah";
-export const coupleName = "Ananya & Rohan";
+export const coupleName = "Riddhi & Shubham";
 export const weddingDate = new Date("2026-04-15T16:00:00");
 
 export const events: WeddingEvent[] = [
