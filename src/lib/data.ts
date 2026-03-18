@@ -132,11 +132,11 @@ export const events: WeddingEvent[] = [
 ];
 
 export const coupleStory: CoupleStoryItem[] = [
-  { year: "2019", title: "First Meeting", description: "A chance encounter at a friend's gallery opening in Mumbai. Rohan spilled his coffee, Ananya handed him a napkin — and the rest is history." },
-  { year: "2020", title: "First Date", description: "A quiet dinner at a rooftop restaurant turned into a six-hour conversation that ended only when the restaurant closed." },
-  { year: "2021", title: "Adventures Together", description: "From backpacking through Rajasthan to quiet weekends reading in cafés, they discovered they were each other's favorite adventure." },
-  { year: "2023", title: "The Proposal", description: "Under a canopy of fairy lights in their favorite garden, Rohan got down on one knee. She said yes before he finished the question." },
-  { year: "2026", title: "Forever Begins", description: "And now, surrounded by the people they love most, they begin the greatest chapter of all." },
+  { year: "20XX", title: "How We Met", description: "Write your story here..." },
+  { year: "20XX", title: "Our First Date", description: "Write your story here..." },
+  { year: "20XX", title: "The Journey Together", description: "Write your story here..." },
+  { year: "20XX", title: "The Proposal", description: "Write your story here..." },
+  { year: "2026", title: "Forever Begins", description: "And now, surrounded by the people we love most, we begin the greatest chapter of all." },
 ];
 
 export const galleryPhotos: GalleryPhoto[] = [
