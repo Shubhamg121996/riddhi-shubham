@@ -57,6 +57,13 @@ const EventDetailPage = () => {
               {event.description}
             </p>
 
+            {event.meal && (
+              <div className="p-5 rounded-2xl bg-warm-cream mb-4">
+                <p className="text-label text-muted-foreground mb-2">Meal</p>
+                <p className="text-sm text-foreground font-sans">{event.meal}</p>
+              </div>
+            )}
+
             {event.notes && (
               <div className="p-5 rounded-2xl bg-warm-cream mb-8">
                 <p className="text-label text-muted-foreground mb-2">Note</p>
