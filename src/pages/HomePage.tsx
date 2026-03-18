@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
 import heroImg from "@/assets/hero-couple.jpg";
-import { guestName, coupleName, weddingDate, events } from "@/lib/data";
+import { coupleName, weddingDate, events } from "@/lib/data";
+import { getGuestName } from "@/lib/guest";
 import PageTransition from "@/components/PageTransition";
 import BottomNav from "@/components/BottomNav";
 import { useEffect, useState } from "react";
@@ -10,6 +11,7 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, mins: 0 });
+  const guestName = getGuestName();
 
   useEffect(() => {
     const update = () => {
