@@ -36,6 +36,8 @@ export interface CoupleStoryItem {
 
 export const guestName = "Sarah";
 export const coupleName = "Riddhi & Shubham";
+export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xIWkmIG0L9mAvU9aGxuxoX-RCZylWnmm?usp=sharing";
+
 export const weddingDate = new Date("2026-12-05T16:00:00");
 
 const venueMapUrl = "https://www.google.com/maps/dir//Uplakshy+The+Banquet+%26+Lawn,+VIP+estate,+Shankar+Nagar,+Raipur,+Chhattisgarh+492014/@13.0279053,77.6405022,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a28dd4b60b2ad35:0xfcb6f5a3753f78ba!2m2!1d81.6772!2d21.2630389?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D";
