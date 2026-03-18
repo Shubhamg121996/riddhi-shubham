@@ -26,7 +26,7 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const nextEvent = events[2]; // wedding ceremony
+  const nextEvent = events[3]; // wedding ceremony
 
   return (
     <PageTransition>

@@ -34,7 +34,7 @@ const EventDetailPage = () => {
             transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="inline-block bg-primary text-primary-foreground text-[10px] uppercase tracking-[0.15em] font-semibold px-4 py-1.5 rounded-full mb-4">
-              {event.dressCode}
+              Attire: {event.dressCode}
             </span>
 
             <h1 className="font-display text-4xl font-medium text-foreground mb-3">
@@ -56,6 +56,13 @@ const EventDetailPage = () => {
             <p className="text-base text-foreground/80 font-sans leading-relaxed mb-8">
               {event.description}
             </p>
+
+            {event.meal && (
+              <div className="p-5 rounded-2xl bg-warm-cream mb-4">
+                <p className="text-label text-muted-foreground mb-2">Meal</p>
+                <p className="text-sm text-foreground font-sans">{event.meal}</p>
+              </div>
+            )}
 
             {event.notes && (
               <div className="p-5 rounded-2xl bg-warm-cream mb-8">
