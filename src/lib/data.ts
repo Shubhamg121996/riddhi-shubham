@@ -16,6 +16,7 @@ export interface WeddingEvent {
   category: "all" | "family" | "close-friends";
   mapUrl: string;
   notes?: string;
+  meal?: string;
 }
 
 export interface GalleryPhoto {
