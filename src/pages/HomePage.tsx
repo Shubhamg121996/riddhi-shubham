@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, mins: 0 });
+  const guestName = getGuestName();
 
   useEffect(() => {
     const update = () => {

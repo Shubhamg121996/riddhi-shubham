@@ -34,7 +34,7 @@ export interface CoupleStoryItem {
   description: string;
 }
 
-export const guestName = "Sarah";
+
 export const coupleName = "Riddhi & Shubham";
 export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xIWkmIG0L9mAvU9aGxuxoX-RCZylWnmm?usp=sharing";
 
