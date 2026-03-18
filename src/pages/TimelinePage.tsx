@@ -81,9 +81,16 @@ const TimelinePage = () => {
                         {event.venue}
                       </span>
                     </div>
-                    <span className="inline-block bg-muted text-muted-foreground text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1 rounded-full">
-                      Attire: {event.dressCode}
-                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="inline-block bg-muted text-muted-foreground text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1 rounded-full">
+                        Attire: {event.dressCode}
+                      </span>
+                      {event.meal && (
+                        <span className="inline-block bg-primary/10 text-primary text-[10px] uppercase tracking-[0.15em] font-semibold px-3 py-1 rounded-full">
+                          {event.meal}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
