@@ -67,7 +67,7 @@ export const events: WeddingEvent[] = [
     venueAddress,
     dressCode: "Traditional / Semi-Formal",
     description: "The auspicious exchange of rings, marking the official engagement of the couple. A beautiful moment of commitment surrounded by family and friends.",
-    image: haldiImg,
+    image: ringCeremonyImg,
     category: "all",
     mapUrl: venueMapUrl,
     meal: "Lunch",
