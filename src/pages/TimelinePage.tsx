@@ -64,7 +64,7 @@ const TimelinePage = () => {
                   <img
                     src={event.image}
                     alt={event.name}
-                    className="w-full h-36 object-cover"
+                    className="w-full h-36 object-cover object-[center_30%]"
                   />
                   <div className="p-5">
                     <p className="text-label text-muted-foreground mb-2">{event.date}</p>
