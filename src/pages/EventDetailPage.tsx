@@ -80,22 +80,31 @@ const EventDetailPage = () => {
               </div>
             )}
 
+            {event.menu && event.menu.length > 0 && (
+              <div className="p-5 rounded-2xl bg-warm-cream mb-4">
+                <p className="text-label text-muted-foreground mb-4">Menu</p>
+                <div className="flex flex-col gap-5">
+                  {event.menu.map((section, idx) => (
+                    <div key={idx}>
+                      <p className="text-xs uppercase tracking-[0.15em] font-semibold text-primary font-sans mb-2">{section.title}</p>
+                      <ul className="flex flex-col gap-1">
+                        {section.items.map((item, j) => (
+                          <li key={j} className="text-sm text-foreground/85 font-sans leading-relaxed">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {event.notes && (
-              <div className="p-5 rounded-2xl bg-warm-cream mb-8">
+              <div className="p-5 rounded-2xl bg-warm-cream mb-4">
                 <p className="text-label text-muted-foreground mb-2">Note</p>
                 <p className="text-sm text-foreground font-sans">{event.notes}</p>
               </div>
             )}
 
-            {/* Map action */}
-            <motion.button
-              onClick={() => window.open(event.mapUrl, "_blank")}
-              className="w-full h-14 rounded-full bg-foreground text-background text-xs uppercase tracking-[0.15em] font-semibold font-sans flex items-center justify-center gap-2"
-              whileTap={{ scale: 0.98 }}
-            >
-              <Navigation size={16} strokeWidth={1.5} />
-              Open in Maps
-            </motion.button>
           </motion.div>
         </div>
       </div>
