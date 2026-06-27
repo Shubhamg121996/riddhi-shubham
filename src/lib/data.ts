@@ -10,6 +10,11 @@ export interface TimelineStep {
   title: string;
 }
 
+export interface MenuSection {
+  title: string;
+  items: string[];
+}
+
 export interface WeddingEvent {
   id: string;
   name: string;
@@ -25,6 +30,7 @@ export interface WeddingEvent {
   notes?: string;
   meal?: string;
   timeline?: TimelineStep[];
+  menu?: MenuSection[];
 }
 
 export interface GalleryPhoto {
@@ -44,10 +50,10 @@ export interface CoupleStoryItem {
 export const coupleName = "Riddhi & Shubham";
 export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xIWkmIG0L9mAvU9aGxuxoX-RCZylWnmm?usp=sharing";
 
-export const weddingDate = new Date("2026-12-05T16:00:00");
+export const weddingDate = new Date("2026-12-04T09:00:00");
 
-const lotusResortMapUrl = "https://www.google.com/maps/search/?api=1&query=Lotus+Resort+Raipur+Chhattisgarh";
-const venueAddress = "Lotus Resort, Raipur, Chhattisgarh";
+export const lotusResortMapUrl = "https://maps.app.goo.gl/dNV1mybEYTtfpgqK7";
+const venueAddress = "Lotus Resort, Vidhan Sabha Road, Raipur (C.G.)";
 
 export const events: WeddingEvent[] = [
   {
@@ -62,8 +68,40 @@ export const events: WeddingEvent[] = [
     image: haldiImg,
     category: "all",
     mapUrl: lotusResortMapUrl,
-    meal: "Lunch",
-    notes: "Followed by a pool party — please wear clothes you don't mind getting turmeric and water on!"
+    meal: "Breakfast & Lunch",
+    notes: "Followed by a pool party — please wear clothes you don't mind getting turmeric and water on!",
+    menu: [
+      {
+        title: "Breakfast",
+        items: [
+          "Cut Fruit (4 types)",
+          "Poha with Barik Sev, Barik Pyaj & Nimbu",
+          "Aloo Paratha with Plain Curd",
+          "Milk & Cornflakes",
+          "Jalebi",
+          "Cookies & Biscuits",
+          "Tea, Coffee",
+        ],
+      },
+      {
+        title: "Haldi Lunch",
+        items: [
+          "Green Salad",
+          "Sattu Litti",
+          "Baigan Bharta",
+          "Aloo Chokha",
+          "Mix Veg",
+          "Dal Tadka",
+          "Tawa Roti",
+          "Roasted Papad",
+          "Jeera Rice",
+          "Kadhi Pakodi",
+          "Paneer Tikka & Buti (Live)",
+          "Mini Rasmalai",
+          "Sandesh",
+        ],
+      },
+    ],
   },
   {
     id: "ring-ceremony",
@@ -78,6 +116,12 @@ export const events: WeddingEvent[] = [
     category: "all",
     mapUrl: lotusResortMapUrl,
     meal: "Evening Snacks & Tea",
+    menu: [
+      {
+        title: "Hi-Tea",
+        items: ["Mix Bhajiya", "Green Chutney", "Tea", "Coffee"],
+      },
+    ],
   },
   {
     id: "mehendi",
@@ -92,12 +136,45 @@ export const events: WeddingEvent[] = [
     category: "all",
     mapUrl: lotusResortMapUrl,
     meal: "Dinner",
+    menu: [
+      {
+        title: "Welcome & Soup",
+        items: ["Veg Hot-n-Sour Soup", "Fried Noodles", "Virgin Mojito"],
+      },
+      {
+        title: "Chaat & Live Counters",
+        items: [
+          "Gupchup (Pani – 2 types)",
+          "Aloo Tikki Chaat",
+          "Bangalore Dosa (Plain, Podi, Masala)",
+          "Chana Chilly (Live)",
+          "Hara Bhara Kabab (Live)",
+          "Corn Kabab (Live)",
+        ],
+      },
+      {
+        title: "Main Course",
+        items: [
+          "Dal Makhani",
+          "Paneer Tikka Masala",
+          "Methi Mutter Malai",
+          "Tawa Roti (Ghee), Tandoori Roti, Mini Naan",
+          "Jeera Rice",
+          "Green Salad",
+          "Papad Fry",
+        ],
+      },
+      {
+        title: "Dessert",
+        items: ["Moong Halwa"],
+      },
+    ],
   },
   {
     id: "wedding",
-    name: "Wedding Ceremony",
-    date: "December 5, 2026",
-    time: "9:30 AM – 3:00 PM",
+    name: "Wedding Celebration",
+    date: "December 4 – 6, 2026",
+    time: "Dec 4, 9:00 AM – Dec 6, 9:00 AM",
     venue: "Lavender Banquet Hall",
     venueAddress,
     dressCode: "Formal Indian / Traditional",
@@ -114,6 +191,47 @@ export const events: WeddingEvent[] = [
       { time: "1:00 PM", title: "Phere & Kanyadaan" },
       { time: "3:00 PM", title: "Vidaai" },
     ],
+    menu: [
+      {
+        title: "Dec 5 — Breakfast",
+        items: [
+          "Bedmi Puri with Rasili Aloo",
+          "Fara with Hari Chutney",
+          "Chawal Chila with Lal Chutney",
+          "Aloo / Ring Onion / Paneer Pakoda",
+          "Grilled Sandwich",
+          "Kheer Kadam",
+          "Tea, Coffee, Biscuit",
+        ],
+      },
+      {
+        title: "Dec 5 — Lunch",
+        items: [
+          "Tomato Soup",
+          "Veg Crispy",
+          "Bati (Ghee)",
+          "Baigan Bharta",
+          "Gatte ki Sabji",
+          "Kadhai Paneer",
+          "Dal Tadka",
+          "Tawa Roti, Missi Roti",
+          "Jeera Matter Rice",
+          "Plain Curd, Achar, Papad, Salad",
+          "Badam Halwa",
+        ],
+      },
+      {
+        title: "Dec 6 — Breakfast",
+        items: [
+          "Idli",
+          "Sambhar Vada",
+          "Nariyal Chutney",
+          "Aloo Puri",
+          "Dahi",
+          "Tea, Coffee, Cookies",
+        ],
+      },
+    ],
   },
   {
     id: "varmala",
@@ -128,6 +246,7 @@ export const events: WeddingEvent[] = [
     category: "all",
     mapUrl: lotusResortMapUrl,
     meal: "Dinner",
+    notes: "Dinner served at the Grand Reception that follows.",
   },
   {
     id: "reception",
@@ -142,6 +261,90 @@ export const events: WeddingEvent[] = [
     category: "all",
     mapUrl: lotusResortMapUrl,
     meal: "Dinner",
+    menu: [
+      {
+        title: "Mocktails, Shakes & Juices",
+        items: [
+          "Classic Mojito",
+          "Blue Lagoon",
+          "Oreo Shake",
+          "Mixed Cold Drinks",
+          "Pineapple Juice",
+          "Watermelon Juice",
+        ],
+      },
+      {
+        title: "Soup",
+        items: ["Veg Manchow Soup", "Sweet Corn Soup", "Fried Noodles"],
+      },
+      {
+        title: "BBQ Nation",
+        items: ["Paneer Tikka", "Malai Tikka", "Soya Chaap", "Green Chutney"],
+      },
+      {
+        title: "Chaat Counter",
+        items: [
+          "Gupchup (Pani – 2 types)",
+          "Aloo Tikki Chaat",
+          "Palak Patta Chaat",
+          "Dahi Bhalla",
+        ],
+      },
+      {
+        title: "Chinese",
+        items: [
+          "Corn Cheese Garlic Bread",
+          "Veg Manchurian",
+          "Chilly Garlic Noodles",
+          "Paneer Chilly",
+          "Pasta in White Sauce",
+        ],
+      },
+      {
+        title: "South Indian",
+        items: [
+          "Masala Dosa",
+          "Podi Tatte Idli",
+          "Peanut Chutney",
+          "Coconut Chutney",
+        ],
+      },
+      {
+        title: "Namkeen & Salad",
+        items: [
+          "Mirchi / Pyaj / Mix Bhajiya with Hari Chutney",
+          "Green, Sprouted & Fruit Salad",
+          "Aloo Chole, Russian & Pan Patta Salad",
+          "Achar Variety, Khichiya Papad, Moong Papad",
+        ],
+      },
+      {
+        title: "Main Course",
+        items: [
+          "Dal Tadka, Dal Makhani",
+          "Tawa Sabji, Methi Matter Malai",
+          "Paneer Lachhedar, Nargis Kofta",
+          "Aloo Posto, Aloo Bhaja",
+          "Jeera Rice, Navratan Pulao",
+          "Tawa Roti, Tandoori Roti, Mini Naan, Garlic Naan",
+        ],
+      },
+      {
+        title: "Punjabi",
+        items: ["Masala Kulcha", "Amritsari Chhole"],
+      },
+      {
+        title: "Sweets",
+        items: [
+          "Gajar ka Halwa",
+          "Rasgulla",
+          "Malai Kulfi",
+          "Butter Scotch Ice-cream",
+          "Kesariya Doodh Counter",
+          "Mukhwas (6 types)",
+        ],
+      },
+    ],
   },
 ];
 
