@@ -85,8 +85,7 @@ const HomePage = () => {
             whileTap={{ scale: 0.98 }}
             onClick={() => navigate(`/event/${nextEvent.id}`)}
           >
-            <p className="text-label text-primary-foreground/60 mb-3">Wedding Ceremony</p>
-            <h2 className="font-display text-2xl font-medium text-primary-foreground mb-2">
+            <h2 className="font-display text-3xl font-medium text-primary-foreground mb-3 uppercase tracking-wide">
               {nextEvent.name}
             </h2>
             <div className="flex flex-col gap-1.5 text-sm text-primary-foreground/70 font-sans">
