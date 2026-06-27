@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Clock, MapPin, Navigation } from "lucide-react";
+import { ArrowLeft, Clock, MapPin } from "lucide-react";
 import { events } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
 
