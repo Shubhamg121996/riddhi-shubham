@@ -16,7 +16,7 @@ const EventDetailPage = () => {
       <div className="min-h-screen bg-background">
         {/* Header Image */}
         <div className="relative h-[50vh]">
-          <img src={event.image} alt={event.name} className="w-full h-full object-cover" />
+          <img src={event.image} alt={event.name} className="w-full h-full object-cover object-[center_30%]" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/20 via-transparent to-background" />
 
           <button
