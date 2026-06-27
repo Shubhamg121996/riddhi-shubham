@@ -85,14 +85,14 @@ const HomePage = () => {
             whileTap={{ scale: 0.98 }}
             onClick={() => navigate(`/event/${nextEvent.id}`)}
           >
-            <p className="text-label text-primary-foreground/60 mb-3">Up Next</p>
+            <p className="text-label text-primary-foreground/60 mb-3">Wedding Ceremony</p>
             <h2 className="font-display text-2xl font-medium text-primary-foreground mb-2">
               {nextEvent.name}
             </h2>
-            <div className="flex items-center gap-4 text-sm text-primary-foreground/70 font-sans">
+            <div className="flex flex-col gap-1.5 text-sm text-primary-foreground/70 font-sans">
               <span className="flex items-center gap-1.5">
                 <Clock size={14} strokeWidth={1.5} />
-                {nextEvent.time}
+                Dec 4, 7:00 AM – Dec 6, 9:00 AM
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin size={14} strokeWidth={1.5} />
