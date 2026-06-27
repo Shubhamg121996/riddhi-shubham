@@ -5,6 +5,11 @@ import receptionImg from "@/assets/event-reception.jpg";
 import varmalaImg from "@/assets/event-varmala.jpg";
 import ringCeremonyImg from "@/assets/event-ring-ceremony.jpg";
 
+export interface TimelineStep {
+  time: string;
+  title: string;
+}
+
 export interface WeddingEvent {
   id: string;
   name: string;
@@ -19,6 +24,7 @@ export interface WeddingEvent {
   mapUrl: string;
   notes?: string;
   meal?: string;
+  timeline?: TimelineStep[];
 }
 
 export interface GalleryPhoto {
@@ -40,12 +46,8 @@ export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xI
 
 export const weddingDate = new Date("2026-12-05T16:00:00");
 
-const venueMapUrl = "https://www.google.com/maps/dir//Uplakshy+The+Banquet+%26+Lawn,+VIP+estate,+Shankar+Nagar,+Raipur,+Chhattisgarh+492014/@13.0279053,77.6405022,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a28dd4b60b2ad35:0xfcb6f5a3753f78ba!2m2!1d81.6772!2d21.2630389?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D";
-const venueName = "Uplakshy The Banquet & Lawn";
-const venueAddress = "VIP Estate, Shankar Nagar, Raipur, Chhattisgarh 492014";
-
-const lotusResortMapUrl = "https://maps.app.goo.gl/dNV1mybEYTtfpgqK7";
-const lotusResortName = "Lotus Resort";
+const lotusResortMapUrl = "https://www.google.com/maps/search/?api=1&query=Lotus+Resort+Raipur+Chhattisgarh";
+const venueAddress = "Lotus Resort, Raipur, Chhattisgarh";
 
 export const events: WeddingEvent[] = [
   {
@@ -53,13 +55,13 @@ export const events: WeddingEvent[] = [
     name: "Haldi Ceremony",
     date: "December 4, 2026",
     time: "11:00 AM – 2:00 PM",
-    venue: `${venueName} — Swimming Pool`,
+    venue: "Swimming Pool",
     venueAddress,
     dressCode: "Yellow & White Traditional",
     description: "A joyous ceremony where turmeric paste is applied to bless the couple, followed by a lively pool party. Join us for music, laughter, and golden celebrations under the sun.",
     image: haldiImg,
     category: "all",
-    mapUrl: venueMapUrl,
+    mapUrl: lotusResortMapUrl,
     meal: "Lunch",
     notes: "Followed by a pool party — please wear clothes you don't mind getting turmeric and water on!"
   },
@@ -68,13 +70,13 @@ export const events: WeddingEvent[] = [
     name: "Ring Ceremony",
     date: "December 4, 2026",
     time: "6:00 PM",
-    venue: `${venueName} — Lavender Banquet Hall, Ground Floor`,
+    venue: "Lavender Banquet Hall, Ground Floor",
     venueAddress,
     dressCode: "Formal / Semi-Formal",
     description: "The auspicious exchange of rings, marking the official engagement of the couple. A beautiful moment of commitment surrounded by family and friends, accompanied by evening snacks and tea.",
     image: ringCeremonyImg,
     category: "all",
-    mapUrl: venueMapUrl,
+    mapUrl: lotusResortMapUrl,
     meal: "Evening Snacks & Tea",
   },
   {
@@ -82,51 +84,60 @@ export const events: WeddingEvent[] = [
     name: "Sangeet",
     date: "December 4, 2026",
     time: "7:00 PM Onwards",
-    venue: `${venueName} — Lavender Banquet Hall, Ground Floor`,
+    venue: "Lavender Banquet Hall, Ground Floor",
     venueAddress,
     dressCode: "Vibrant Colors",
     description: "An enchanting evening of live music, dance performances, and delicious food. Celebrate the union with joyful sangeet performances by family and friends.",
     image: mehendiImg,
     category: "all",
-    mapUrl: venueMapUrl,
+    mapUrl: lotusResortMapUrl,
     meal: "Dinner",
   },
   {
     id: "wedding",
     name: "Wedding Ceremony",
-    date: "December 4 – 6, 2026",
-    time: "Dec 4, 7:00 AM – Dec 6, 9:00 AM",
-    venue: lotusResortName,
-    venueAddress: "Lotus Resort",
+    date: "December 5, 2026",
+    time: "9:30 AM – 3:00 PM",
+    venue: "Lavender Banquet Hall",
+    venueAddress,
     dressCode: "Formal Indian / Traditional",
-    description: "The sacred wedding ceremony blending the beauty of Bengali and UP traditions. The celebration begins with Shubo Drishti — the auspicious first glance between the bride and groom. This is followed by Mala Badal (exchange of garlands), Saat Paak, Subho Drishti, Sampradan, Sindoor Daan, and other cherished Bengali rituals. The ceremony then continues with traditional UP wedding customs including Kanyadaan, Phere (seven sacred rounds around the holy fire), and Vidaai — a truly beautiful fusion of two rich cultures coming together.",
+    description: "The sacred wedding ceremony — a beautiful fusion of Bengali and UP traditions. From Shubo Drishti and Mala Badal to Phere and Vidaai, join us in witnessing the rituals that unite two souls and two cultures.",
     image: weddingImg,
     category: "all",
     mapUrl: lotusResortMapUrl,
     meal: "Breakfast & Lunch",
+    timeline: [
+      { time: "9:30 AM", title: "Baraat" },
+      { time: "10:30 AM", title: "Reaching the Hall (1 hour of dancing)" },
+      { time: "11:00 AM", title: "Shubo Drishti" },
+      { time: "11:30 AM", title: "Mala Badal, Saat Paak, Sampradan, Sindoor Daan" },
+      { time: "1:00 PM", title: "Phere & Kanyadaan" },
+      { time: "3:00 PM", title: "Vidaai" },
+    ],
   },
   {
     id: "varmala",
     name: "Varmala",
     date: "December 5, 2026",
-    time: "6:00 PM",
-    venue: lotusResortName,
-    venueAddress: "Lotus Resort",
+    time: "7:30 PM",
+    venue: "Lawn",
+    venueAddress,
     dressCode: "Formal Indian / Traditional",
-    description: "The grand Varmala ceremony — the exchange of flower garlands between the bride and groom, symbolizing their acceptance of each other. A joyous and celebratory moment filled with music and excitement.",
+    description: "The grand Varmala ceremony — the exchange of flower garlands between the bride and groom under the open sky, symbolizing their acceptance of each other. A joyous moment filled with music, lights, and excitement.",
     image: varmalaImg,
     category: "all",
     mapUrl: lotusResortMapUrl,
+    meal: "Dinner",
   },
   {
     id: "reception",
     name: "Grand Reception",
     date: "December 5, 2026",
     time: "8:00 PM Onwards",
-    venue: lotusResortName,
-    venueAddress: "Lotus Resort",
+    venue: "Lawn",
+    venueAddress,
     dressCode: "Black Tie / Evening Gowns",
-    description: "An evening of elegance, fine dining, and dancing. Celebrate the newlyweds with cocktails, a grand dinner, and unforgettable memories.",
+    description: "An evening of elegance, fine dining, and dancing under the stars. Celebrate the newlyweds with cocktails, a grand dinner, and unforgettable memories.",
     image: receptionImg,
     category: "all",
     mapUrl: lotusResortMapUrl,

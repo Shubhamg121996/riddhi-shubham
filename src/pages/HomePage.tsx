@@ -92,7 +92,7 @@ const HomePage = () => {
             <div className="flex flex-col gap-1.5 text-sm text-primary-foreground/70 font-sans">
               <span className="flex items-center gap-1.5">
                 <Clock size={14} strokeWidth={1.5} />
-                Dec 4, 7:00 AM – Dec 6, 9:00 AM
+                {nextEvent.date} · {nextEvent.time}
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin size={14} strokeWidth={1.5} />
