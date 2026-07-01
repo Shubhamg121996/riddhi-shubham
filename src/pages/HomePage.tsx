@@ -109,9 +109,26 @@ const HomePage = () => {
             </button>
           </motion.div>
 
+          {/* RSVP CTA */}
+          <motion.button
+            onClick={() => navigate("/rsvp")}
+            className="mt-6 w-full p-5 rounded-2xl bg-warm-cream shadow-paper text-left flex items-center justify-between gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.58, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            whileTap={{ scale: 0.99 }}
+          >
+            <div>
+              <p className="text-label text-muted-foreground mb-1">Kindly Respond</p>
+              <p className="font-display text-xl text-foreground">RSVP & Travel Plans</p>
+              <p className="text-xs text-muted-foreground mt-1">Takes about a minute</p>
+            </div>
+            <span className="w-11 h-11 rounded-full bg-foreground text-background flex items-center justify-center shrink-0 text-lg">→</span>
+          </motion.button>
+
           {/* Quick Links */}
           <motion.div
-            className="mt-6 grid grid-cols-2 gap-3"
+            className="mt-4 grid grid-cols-2 gap-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
