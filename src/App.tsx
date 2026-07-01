@@ -11,6 +11,7 @@ import EventDetailPage from "./pages/EventDetailPage";
 import GalleryPage from "./pages/GalleryPage";
 import StoryPage from "./pages/StoryPage";
 import NotFound from "./pages/NotFound";
+import RSVPPage from "./pages/RSVPPage";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/event/:id" element={<EventDetailPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/story" element={<StoryPage />} />
+            <Route path="/rsvp" element={<RSVPPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
