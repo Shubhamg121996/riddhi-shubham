@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
-import heroImg from "@/assets/hero-couple.jpg";
+import heroAsset from "@/assets/home-bg.png.asset.json";
+const heroImg = heroAsset.url;
 import { coupleName, weddingDate, events } from "@/lib/data";
 import { getGuestName } from "@/lib/guest";
 import PageTransition from "@/components/PageTransition";
