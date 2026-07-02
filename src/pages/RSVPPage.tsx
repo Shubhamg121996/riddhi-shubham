@@ -99,13 +99,9 @@ const RSVPPage = () => {
 
   const stepNumberDisplay = () => {
     if (done) return null;
-    if (state.attendance === "No") {
-      // 0 welcome, 1 attendance, 2 message, 3 thanks
-      if (step === 0) return null;
-      return `Step ${Math.min(step, totalNo - 1)} of ${totalNo - 1}`;
-    }
-    if (step === 0) return null;
-    return `Step ${step} of ${totalYes - 1}`;
+    const total = totalSteps - 1;
+    const current = Math.min(Math.max(step, 0), total) + 1;
+    return `Step ${current} of ${total + 1}`;
   };
 
   const next = () => setStep((s) => s + 1);
@@ -129,6 +125,8 @@ const RSVPPage = () => {
       });
       return;
     }
+    setWasUpdate(hasExisting);
+    setHasExisting(true);
     setDone(true);
   };
 
