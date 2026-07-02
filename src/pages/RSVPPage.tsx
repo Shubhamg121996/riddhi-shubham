@@ -520,7 +520,7 @@ const Stepper = ({
   </div>
 );
 
-const ThankYou = ({ onFinish }: { onFinish: () => void }) => (
+const ThankYou = ({ onFinish, isUpdate }: { onFinish: () => void; isUpdate: boolean }) => (
   <motion.div
     initial={{ opacity: 0, y: 16 }}
     animate={{ opacity: 1, y: 0 }}
@@ -534,7 +534,7 @@ const ThankYou = ({ onFinish }: { onFinish: () => void }) => (
       Thank You <span aria-hidden>❤️</span>
     </h1>
     <p className="mt-5 text-foreground/80 font-sans leading-relaxed">
-      We've received your RSVP.
+      {isUpdate ? "Your RSVP has been updated successfully." : "We've received your RSVP."}
     </p>
     <p className="mt-3 text-foreground/70 font-sans leading-relaxed">
       We're excited to celebrate this wonderful occasion with you and your family.
