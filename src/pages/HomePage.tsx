@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
-import heroImg from "@/assets/hero-couple.jpg";
+import heroAsset from "@/assets/home-bg.png.asset.json";
+const heroImg = heroAsset.url;
 import { coupleName, weddingDate, events } from "@/lib/data";
 import { getGuestName } from "@/lib/guest";
 import PageTransition from "@/components/PageTransition";
@@ -34,8 +35,8 @@ const HomePage = () => {
     <PageTransition>
       <div className="min-h-screen bg-background pb-24">
         {/* Hero */}
-        <div className="relative h-[45vh] overflow-hidden">
-          <img src={heroImg} alt={coupleName} className="w-full h-full object-cover" />
+        <div className="relative h-[60vh] overflow-hidden">
+          <img src={heroImg} alt={coupleName} className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
           <div className="absolute inset-0 shadow-[inset_0_-40px_40px_-20px_hsl(45,20%,96%)]" />
         </div>

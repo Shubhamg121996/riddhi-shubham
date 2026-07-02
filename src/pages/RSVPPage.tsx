@@ -54,6 +54,8 @@ const RSVPPage = () => {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+  const [wasUpdate, setWasUpdate] = useState(false);
+  const [hasExisting, setHasExisting] = useState(false);
 
   const [state, setState] = useState<RsvpPayload>({
     code,
@@ -77,6 +79,7 @@ const RSVPPage = () => {
       const existing = await fetchExistingRsvp(code);
       if (existing) {
         setState((s) => ({ ...s, ...existing, code, name: existing.name || guestName }));
+        setHasExisting(true);
       }
       setLoading(false);
     })();
@@ -96,13 +99,9 @@ const RSVPPage = () => {
 
   const stepNumberDisplay = () => {
     if (done) return null;
-    if (state.attendance === "No") {
-      // 0 welcome, 1 attendance, 2 message, 3 thanks
-      if (step === 0) return null;
-      return `Step ${Math.min(step, totalNo - 1)} of ${totalNo - 1}`;
-    }
-    if (step === 0) return null;
-    return `Step ${step} of ${totalYes - 1}`;
+    const total = totalSteps - 1;
+    const current = Math.min(Math.max(step, 0), total - 1) + 1;
+    return `Step ${current} of ${total}`;
   };
 
   const next = () => setStep((s) => s + 1);
@@ -126,12 +125,14 @@ const RSVPPage = () => {
       });
       return;
     }
+    setWasUpdate(hasExisting);
+    setHasExisting(true);
     setDone(true);
   };
 
   const progress = () => {
     if (done) return 100;
-    const total = totalSteps - 1;
+    const total = Math.max(1, totalSteps - 2);
     return Math.min(100, Math.round((step / total) * 100));
   };
 
@@ -173,7 +174,7 @@ const RSVPPage = () => {
               <Loader2 className="animate-spin" size={20} />
             </div>
           ) : done ? (
-            <ThankYou onFinish={() => navigate("/home")} />
+            <ThankYou isUpdate={wasUpdate} onFinish={() => navigate("/home")} />
           ) : (
             <AnimatePresence mode="wait">
               <motion.div
@@ -519,7 +520,7 @@ const Stepper = ({
   </div>
 );
 
-const ThankYou = ({ onFinish }: { onFinish: () => void }) => (
+const ThankYou = ({ onFinish, isUpdate }: { onFinish: () => void; isUpdate: boolean }) => (
   <motion.div
     initial={{ opacity: 0, y: 16 }}
     animate={{ opacity: 1, y: 0 }}
@@ -533,7 +534,7 @@ const ThankYou = ({ onFinish }: { onFinish: () => void }) => (
       Thank You <span aria-hidden>❤️</span>
     </h1>
     <p className="mt-5 text-foreground/80 font-sans leading-relaxed">
-      We've received your RSVP.
+      {isUpdate ? "Your RSVP has been updated successfully." : "We've received your RSVP."}
     </p>
     <p className="mt-3 text-foreground/70 font-sans leading-relaxed">
       We're excited to celebrate this wonderful occasion with you and your family.
