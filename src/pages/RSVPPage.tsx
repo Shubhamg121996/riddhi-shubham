@@ -132,7 +132,7 @@ const RSVPPage = () => {
 
   const progress = () => {
     if (done) return 100;
-    const total = totalSteps - 1;
+    const total = Math.max(1, totalSteps - 2);
     return Math.min(100, Math.round((step / total) * 100));
   };
 
