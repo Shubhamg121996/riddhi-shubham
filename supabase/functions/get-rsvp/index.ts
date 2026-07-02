@@ -3,7 +3,7 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 const GATEWAY = 'https://connector-gateway.lovable.dev/google_sheets/v4';
 const SHEET_ID = '19I_1J2xh4ZyGDheAUdYBJDw8NX8BUHCqKg219O3069A';
 const TAB = 'RSVP';
-const RANGE = `${TAB}!A:K`;
+const RANGE = `${TAB}!A:L`;
 
 function gwHeaders() {
   return {

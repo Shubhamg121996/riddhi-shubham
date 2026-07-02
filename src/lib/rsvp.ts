@@ -42,8 +42,28 @@ export async function submitRsvp(payload: RsvpPayload): Promise<{ ok: boolean; e
     body: payload,
   });
   if (error) {
-    return { ok: false, error: error.message ?? "Failed to submit RSVP" };
+    // Try to extract server-side error body for a descriptive message
+    let serverMsg: string | undefined;
+    try {
+      const ctx = (error as { context?: Response }).context;
+      if (ctx && typeof ctx.text === "function") {
+        const txt = await ctx.text();
+        try {
+          const parsed = JSON.parse(txt);
+          serverMsg = parsed?.error ?? txt;
+        } catch {
+          serverMsg = txt;
+        }
+      }
+    } catch (e) {
+      console.error("submitRsvp: could not read error context", e);
+    }
+    console.error("submitRsvp failed:", serverMsg ?? error.message);
+    return { ok: false, error: serverMsg ?? error.message ?? "Failed to submit RSVP" };
   }
-  if (data?.error) return { ok: false, error: data.error };
+  if (data?.error) {
+    console.error("submitRsvp server error:", data.error);
+    return { ok: false, error: data.error };
+  }
   return { ok: true };
 }
