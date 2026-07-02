@@ -52,6 +52,7 @@ const RSVPPage = () => {
 
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
   const [wasUpdate, setWasUpdate] = useState(false);
   const [hasExisting, setHasExisting] = useState(false);
