@@ -79,6 +79,7 @@ const RSVPPage = () => {
       const existing = await fetchExistingRsvp(code);
       if (existing) {
         setState((s) => ({ ...s, ...existing, code, name: existing.name || guestName }));
+        setHasExisting(true);
       }
       setLoading(false);
     })();
