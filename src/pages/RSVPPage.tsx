@@ -174,7 +174,7 @@ const RSVPPage = () => {
               <Loader2 className="animate-spin" size={20} />
             </div>
           ) : done ? (
-            <ThankYou isUpdate={wasUpdate} onFinish={() => navigate("/home")} />)
+            <ThankYou isUpdate={wasUpdate} onFinish={() => navigate("/home")} />
           ) : (
             <AnimatePresence mode="wait">
               <motion.div
