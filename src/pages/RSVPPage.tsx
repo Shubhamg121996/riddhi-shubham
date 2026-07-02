@@ -100,8 +100,8 @@ const RSVPPage = () => {
   const stepNumberDisplay = () => {
     if (done) return null;
     const total = totalSteps - 1;
-    const current = Math.min(Math.max(step, 0), total) + 1;
-    return `Step ${current} of ${total + 1}`;
+    const current = Math.min(Math.max(step, 0), total - 1) + 1;
+    return `Step ${current} of ${total}`;
   };
 
   const next = () => setStep((s) => s + 1);
