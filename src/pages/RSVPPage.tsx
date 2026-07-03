@@ -80,6 +80,11 @@ const RSVPPage = () => {
       if (existing) {
         setState((s) => ({ ...s, ...existing, code, name: existing.name || guestName }));
         setHasExisting(true);
+        // If user clicked "Edit" from the home card, jump straight to the arrival date step
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("edit") === "1" && existing.attendance === "Yes") {
+          setStep(3);
+        }
       }
       setLoading(false);
     })();
@@ -322,6 +327,9 @@ const RSVPPage = () => {
         return (
           <div>
             <QuestionTitle>When are you planning to arrive?</QuestionTitle>
+            <p className="mt-3 text-xs text-muted-foreground font-sans italic">
+              Don't worry — if your plans change, you can always come back and edit this later.
+            </p>
             <div className="mt-6 space-y-3">
               {ARRIVAL_DATES.map((d) => (
                 <SelectableCard

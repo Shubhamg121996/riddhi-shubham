@@ -345,11 +345,36 @@ export const events: WeddingEvent[] = [
 ];
 
 export const coupleStory: CoupleStoryItem[] = [
-  { year: "20XX", title: "How We Met", description: "Write your story here..." },
-  { year: "20XX", title: "Our First Date", description: "Write your story here..." },
-  { year: "20XX", title: "The Journey Together", description: "Write your story here..." },
-  { year: "20XX", title: "The Proposal", description: "Write your story here..." },
-  { year: "2026", title: "Forever Begins", description: "And now, surrounded by the people we love most, we begin the greatest chapter of all." },
+  {
+    year: "2022",
+    title: "How We Met",
+    description:
+      "Beneath the emerald canopy of IIT Madras, two strangers met. Friendship bloomed under starlit skies at the KV court, where countless conversations quietly became the beginning of our forever.",
+  },
+  {
+    year: "March 2022",
+    title: "Our First Date",
+    description:
+      "The sea at Sholinganallur witnessed our first adventure together. As the waves danced ashore, our hands found each other — and our hearts never let go.",
+  },
+  {
+    year: "2022 – 2025",
+    title: "The Journey Together",
+    description:
+      "From trekking the steep hills of Parvathamalai to catch a breathtaking sunrise, to riding through Kerala's winding roads, every adventure brought new memories, new laughter, and new dreams. Through every high and low, we didn't just travel the world — we grew together, hand in hand.",
+  },
+  {
+    year: "2026",
+    title: "The Proposal",
+    description:
+      "One question, one heartbeat, one unforgettable \"Yes.\" In that moment, every road we had walked together led to a promise — to choose each other today, tomorrow, and for all the years to come.",
+  },
+  {
+    year: "2026",
+    title: "Forever Begins",
+    description:
+      "And now, surrounded by the people we love most, we begin the greatest chapter of all.",
+  },
 ];
 
 export const galleryPhotos: GalleryPhoto[] = [
