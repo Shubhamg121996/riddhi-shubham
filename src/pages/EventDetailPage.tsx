@@ -10,8 +10,10 @@ const EventDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const event = events.find((e) => e.id === id);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   if (!event) return null;
+
 
   return (
     <PageTransition>
