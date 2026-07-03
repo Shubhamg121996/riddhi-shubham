@@ -327,6 +327,9 @@ const RSVPPage = () => {
         return (
           <div>
             <QuestionTitle>When are you planning to arrive?</QuestionTitle>
+            <p className="mt-3 text-xs text-muted-foreground font-sans italic">
+              Don't worry — if your plans change, you can always come back and edit this later.
+            </p>
             <div className="mt-6 space-y-3">
               {ARRIVAL_DATES.map((d) => (
                 <SelectableCard
