@@ -56,12 +56,29 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          {/* Countdown */}
-          <motion.div
-            className="flex justify-between mt-8 py-5 px-6 bg-card rounded-2xl shadow-paper"
+          {/* RSVP CTA */}
+          <motion.button
+            onClick={() => navigate("/rsvp")}
+            className="mt-8 w-full p-5 rounded-2xl bg-warm-cream shadow-paper text-left flex items-center justify-between gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            whileTap={{ scale: 0.99 }}
+          >
+            <div>
+              <p className="text-label text-muted-foreground mb-1">Kindly Respond</p>
+              <p className="font-display text-xl text-foreground">RSVP & Travel Plans</p>
+              <p className="text-xs text-muted-foreground mt-1">Takes about a minute</p>
+            </div>
+            <span className="w-11 h-11 rounded-full bg-foreground text-background flex items-center justify-center shrink-0 text-lg">→</span>
+          </motion.button>
+
+          {/* Countdown */}
+          <motion.div
+            className="flex justify-between mt-6 py-5 px-6 bg-card rounded-2xl shadow-paper"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             {[
               { val: countdown.days, label: "Days" },
@@ -110,22 +127,6 @@ const HomePage = () => {
             </button>
           </motion.div>
 
-          {/* RSVP CTA */}
-          <motion.button
-            onClick={() => navigate("/rsvp")}
-            className="mt-6 w-full p-5 rounded-2xl bg-warm-cream shadow-paper text-left flex items-center justify-between gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.58, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            whileTap={{ scale: 0.99 }}
-          >
-            <div>
-              <p className="text-label text-muted-foreground mb-1">Kindly Respond</p>
-              <p className="font-display text-xl text-foreground">RSVP & Travel Plans</p>
-              <p className="text-xs text-muted-foreground mt-1">Takes about a minute</p>
-            </div>
-            <span className="w-11 h-11 rounded-full bg-foreground text-background flex items-center justify-center shrink-0 text-lg">→</span>
-          </motion.button>
 
           {/* Quick Links */}
           <motion.div
