@@ -1,8 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowLeft, Clock, MapPin } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Clock, MapPin, ChevronDown } from "lucide-react";
 import { events } from "@/lib/data";
 import PageTransition from "@/components/PageTransition";
+
 
 const EventDetailPage = () => {
   const { id } = useParams();
