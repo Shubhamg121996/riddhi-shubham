@@ -80,6 +80,11 @@ const RSVPPage = () => {
       if (existing) {
         setState((s) => ({ ...s, ...existing, code, name: existing.name || guestName }));
         setHasExisting(true);
+        // If user clicked "Edit" from the home card, jump straight to the arrival date step
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("edit") === "1" && existing.attendance === "Yes") {
+          setStep(3);
+        }
       }
       setLoading(false);
     })();
