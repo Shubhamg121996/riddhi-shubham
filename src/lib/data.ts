@@ -182,18 +182,24 @@ export const events: WeddingEvent[] = [
     image: weddingImg,
     category: "all",
     mapUrl: lotusResortMapUrl,
-    meal: "Breakfast & Lunch",
     timeline: [
-      { time: "9:30 AM", title: "Baraat" },
-      { time: "10:30 AM", title: "Reaching the Hall (1 hour of dancing)" },
-      { time: "11:00 AM", title: "Shubo Drishti" },
-      { time: "11:30 AM", title: "Mala Badal, Saat Paak, Sampradan, Sindoor Daan" },
-      { time: "1:00 PM", title: "Phere & Kanyadaan" },
-      { time: "3:00 PM", title: "Vidaai" },
+      { time: "Day 1 — Dec 4", title: "" },
+      { time: "12:00 PM", title: "Haldi" },
+      { time: "2:00 PM", title: "Pool Party" },
+      { time: "6:30 PM", title: "Ring Ceremony" },
+      { time: "7:00 PM", title: "Sangeet" },
+      { time: "Day 2 — Dec 5", title: "" },
+      { time: "10:00 AM", title: "Baraat" },
+      { time: "11:30 AM", title: "Shubo Drishti" },
+      { time: "12:00 PM", title: "Mala Badal, Saat Paak, Sampradaan, Sindoor Daan" },
+      { time: "2:00 PM", title: "Phere & Kanyadaan" },
+      { time: "7:00 PM", title: "Jay Mala" },
+      { time: "8:00 PM", title: "Reception" },
+      { time: "11:00 PM", title: "Vidai" },
     ],
     menu: [
       {
-        title: "Dec 5 — Breakfast",
+        title: "Dec 5 — Breakfast (9:00 AM – 11:00 AM)",
         items: [
           "Bedmi Puri with Rasili Aloo",
           "Fara with Hari Chutney",
@@ -205,7 +211,7 @@ export const events: WeddingEvent[] = [
         ],
       },
       {
-        title: "Dec 5 — Lunch",
+        title: "Dec 5 — Lunch (1:00 PM – 4:00 PM)",
         items: [
           "Tomato Soup",
           "Veg Crispy",
@@ -220,18 +226,8 @@ export const events: WeddingEvent[] = [
           "Badam Halwa",
         ],
       },
-      {
-        title: "Dec 6 — Breakfast",
-        items: [
-          "Idli",
-          "Sambhar Vada",
-          "Nariyal Chutney",
-          "Aloo Puri",
-          "Dahi",
-          "Tea, Coffee, Cookies",
-        ],
-      },
     ],
+
   },
   {
     id: "varmala",
