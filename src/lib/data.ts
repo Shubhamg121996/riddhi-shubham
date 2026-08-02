@@ -377,11 +377,6 @@ export const coupleStory: CoupleStoryItem[] = [
   },
 ];
 
-export const galleryPhotos: GalleryPhoto[] = [
-  { id: "1", src: haldiImg, caption: "Haldi celebrations" },
-  { id: "2", src: mehendiImg, caption: "Mehendi & Sangeet" },
-  { id: "3", src: weddingImg, caption: "Wedding ceremony" },
-  { id: "4", src: varmalaImg, caption: "Varmala" },
-  { id: "5", src: ringCeremonyImg, caption: "Ring ceremony" },
-  { id: "6", src: receptionImg, caption: "Reception" },
-];
+// Gallery photos are loaded live from the shared Google Drive folder.
+// Bundled event artwork in src/assets is intentionally kept out of the gallery.
+

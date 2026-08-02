@@ -18,17 +18,17 @@ export async function validateInviteCode(code: string): Promise<Guest | null> {
       .map((row) =>
         row.split(",").map((cell) => cell.replace(/^"|"$/g, "").trim())
       )
-      .filter((row) => row.length >= 2 && row[0] && row[1]);
+      .filter((row) => row.length >= 3 && row[0]);
 
-    // Skip header row if present
-    const dataRows = rows[0]?.[0]?.toLowerCase() === "name" ? rows.slice(1) : rows;
+    const entered = code.trim().toUpperCase();
 
-    const match = dataRows.find(
-      (row) => row[1].toUpperCase() === code.toUpperCase()
+    // Column C holds the access code; column A holds the guest name.
+    const match = rows.find(
+      (row) => (row[2] || "").trim().toUpperCase() === entered
     );
 
     if (match) {
-      return { name: match[0], code: match[1] };
+      return { name: match[0], code: (match[2] || "").trim().toUpperCase() };
     }
     return null;
   } catch (err) {
@@ -36,6 +36,7 @@ export async function validateInviteCode(code: string): Promise<Guest | null> {
     return null;
   }
 }
+
 
 export function saveGuest(guest: Guest) {
   localStorage.setItem(GUEST_NAME_KEY, guest.name);
