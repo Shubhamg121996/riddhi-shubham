@@ -217,12 +217,10 @@ const HomePage = () => {
 
           {/* Now Card */}
           <motion.div
-            className="mt-6 p-6 rounded-3xl bg-primary shadow-elevated cursor-pointer"
+            className="mt-6 p-6 rounded-3xl bg-primary shadow-elevated"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => navigate(`/event/${nextEvent.id}`)}
           >
             <h2 className="font-display text-3xl font-medium text-primary-foreground mb-3 uppercase tracking-wide">
               {nextEvent.name}
@@ -234,19 +232,17 @@ const HomePage = () => {
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin size={14} strokeWidth={1.5} />
-                {nextEvent.venue}
+                Lotus Resort, Raipur
               </span>
             </div>
             <button
               className="mt-4 h-10 px-6 rounded-full bg-foreground text-background text-xs uppercase tracking-[0.12em] font-semibold font-sans"
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(nextEvent.mapUrl, "_blank");
-              }}
+              onClick={() => window.open(nextEvent.mapUrl, "_blank")}
             >
               Get Directions
             </button>
           </motion.div>
+
 
 
           {/* Quick Links */}
