@@ -11,8 +11,9 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    if (code.length < 4) return;
+    if (code.trim().length < 2) return;
     setLoading(true);
+
     setError("");
 
     const guest = await validateInviteCode(code);
@@ -61,15 +62,16 @@ const LoginPage = () => {
 
         <input
           type="text"
-          maxLength={6}
+          maxLength={10}
           value={code}
           onChange={(e) => {
-            setCode(e.target.value.toUpperCase());
+            setCode(e.target.value.replace(/[^a-zA-Z]/g, "").toUpperCase());
             setError("");
           }}
-          placeholder="• • • • • •"
-          className="w-full text-center text-4xl tracking-[0.5em] font-display bg-transparent border-b-2 border-primary pb-4 mb-3 focus:outline-none focus:border-foreground transition-colors placeholder:text-border"
+          placeholder="• • • •"
+          className="w-full text-center text-4xl tracking-[0.35em] font-display bg-transparent border-b-2 border-primary pb-4 mb-3 focus:outline-none focus:border-foreground transition-colors placeholder:text-border"
         />
+
 
         {error && (
           <motion.p
@@ -85,7 +87,7 @@ const LoginPage = () => {
           <motion.button
             onClick={handleSubmit}
             className="h-12 px-10 rounded-full bg-foreground text-background text-xs uppercase tracking-[0.15em] font-semibold font-sans disabled:opacity-30 transition-opacity"
-            disabled={code.length < 4 || loading}
+            disabled={code.trim().length < 2 || loading}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
