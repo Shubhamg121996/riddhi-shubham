@@ -42,13 +42,13 @@ const EventDetailPage = () => {
             </span>
 
             <h1 className="font-display text-4xl font-medium text-foreground mb-3">
-              {event.name}
+              {event.displayName ?? event.name}
             </h1>
 
             <div className="flex flex-col gap-3 text-sm text-muted-foreground font-sans mb-6">
               <span className="flex items-center gap-2">
                 <Clock size={16} strokeWidth={1.5} />
-                {event.date} · {event.time}
+                {event.displayDate ?? event.date} · {event.displayTime ?? event.time}
               </span>
               <span className="flex items-center gap-2">
                 <MapPin size={16} strokeWidth={1.5} />

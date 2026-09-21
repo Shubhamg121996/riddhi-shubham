@@ -29,6 +29,9 @@ export interface WeddingEvent {
   meal?: string;
   timeline?: TimelineStep[];
   menu?: MenuSection[];
+  displayName?: string;
+  displayDate?: string;
+  displayTime?: string;
 }
 
 export interface GalleryPhoto {
@@ -161,6 +164,9 @@ export const events: WeddingEvent[] = [
     name: "Wedding Celebration",
     date: "December 4 – 6, 2026",
     time: "Dec 4, 9:00 AM – Dec 6, 9:00 AM",
+    displayName: "Wedding Ceremony",
+    displayDate: "December 5, 2026",
+    displayTime: "10:00 AM – 4:00 PM",
     venue: "Lavender Banquet Hall",
     venueAddress,
     dressCode: "Formal Indian / Traditional",
