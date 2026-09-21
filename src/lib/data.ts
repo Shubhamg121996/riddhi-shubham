@@ -158,7 +158,7 @@ export const events: WeddingEvent[] = [
           "Dal Makhani",
           "Paneer Tikka Masala",
           "Methi Mutter Malai",
-          "Tawa Roti (Ghee), Tandoori Roti, Mini Naan",
+          "Tawa Roti, Tandoori Roti, Mini Naan",
           "Jeera Rice",
           "Green Salad",
           "Papad Fry",
