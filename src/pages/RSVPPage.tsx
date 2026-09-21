@@ -13,7 +13,7 @@ const ARRIVAL_DATES = [
   {
     id: "4 December",
     title: "4 December",
-    sub: "Morning – Haldi · Evening – Ring Ceremony · Night – Sangeet",
+    sub: "Morning – Haldi · Evening – Ring Ceremony & Sangeet",
   },
   {
     id: "5 December",
