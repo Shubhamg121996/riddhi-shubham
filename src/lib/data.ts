@@ -53,7 +53,7 @@ export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xI
 export const weddingDate = new Date("2026-12-04T09:00:00");
 
 export const lotusResortMapUrl = "https://maps.app.goo.gl/dNV1mybEYTtfpgqK7";
-const venueAddress = "Lotus Resort, Vidhan Sabha Road, Raipur (C.G.)";
+const venueAddress = "Lotus Resort, Vidhan Sabha Road, Raipur";
 
 export const events: WeddingEvent[] = [
   {
@@ -74,7 +74,7 @@ export const events: WeddingEvent[] = [
       {
         title: "Breakfast",
         items: [
-          "Cut Fruit (4 types)",
+          "Cut Fruit",
           "Poha with Barik Sev, Barik Pyaj & Nimbu",
           "Aloo Paratha with Plain Curd",
           "Milk & Cornflakes",
@@ -96,7 +96,7 @@ export const events: WeddingEvent[] = [
           "Roasted Papad",
           "Jeera Rice",
           "Kadhi Pakodi",
-          "Paneer Tikka & Buti (Live)",
+          "Paneer Tikka & Buti",
           "Mini Rasmalai",
           "Sandesh",
         ],
@@ -144,12 +144,12 @@ export const events: WeddingEvent[] = [
       {
         title: "Chaat & Live Counters",
         items: [
-          "Gupchup (Pani – 2 types)",
+          "Gupchup",
           "Aloo Tikki Chaat",
-          "Bangalore Dosa (Plain, Podi, Masala)",
-          "Chana Chilly (Live)",
-          "Hara Bhara Kabab (Live)",
-          "Corn Kabab (Live)",
+          "Bangalore Dosa",
+          "Chana Chilly",
+          "Hara Bhara Kabab",
+          "Corn Kabab",
         ],
       },
       {
@@ -158,7 +158,7 @@ export const events: WeddingEvent[] = [
           "Dal Makhani",
           "Paneer Tikka Masala",
           "Methi Mutter Malai",
-          "Tawa Roti (Ghee), Tandoori Roti, Mini Naan",
+          "Tawa Roti, Tandoori Roti, Mini Naan",
           "Jeera Rice",
           "Green Salad",
           "Papad Fry",
@@ -199,7 +199,7 @@ export const events: WeddingEvent[] = [
     ],
     menu: [
       {
-        title: "Dec 5 — Breakfast (9:00 AM – 11:00 AM)",
+        title: "Dec 5 — Breakfast",
         items: [
           "Bedmi Puri with Rasili Aloo",
           "Fara with Hari Chutney",
@@ -211,11 +211,11 @@ export const events: WeddingEvent[] = [
         ],
       },
       {
-        title: "Dec 5 — Lunch (1:00 PM – 4:00 PM)",
+        title: "Dec 5 — Lunch",
         items: [
           "Tomato Soup",
           "Veg Crispy",
-          "Bati (Ghee)",
+          "Bati",
           "Baigan Bharta",
           "Gatte ki Sabji",
           "Kadhai Paneer",
@@ -280,7 +280,7 @@ export const events: WeddingEvent[] = [
       {
         title: "Chaat Counter",
         items: [
-          "Gupchup (Pani – 2 types)",
+          "Gupchup",
           "Aloo Tikki Chaat",
           "Palak Patta Chaat",
           "Dahi Bhalla",
@@ -337,7 +337,7 @@ export const events: WeddingEvent[] = [
           "Malai Kulfi",
           "Butter Scotch Ice-cream",
           "Kesariya Doodh Counter",
-          "Mukhwas (6 types)",
+          "Mukhwas",
         ],
       },
     ],
