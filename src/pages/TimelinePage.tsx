@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Clock, MapPin } from "lucide-react";
@@ -7,37 +6,16 @@ import PageTransition from "@/components/PageTransition";
 import BottomNav from "@/components/BottomNav";
 
 const TimelinePage = () => {
-  const [filter, setFilter] = useState<"all" | "personalized">("personalized");
   const navigate = useNavigate();
-
-  const filteredEvents = filter === "all"
-    ? events
-    : events.filter((e) => e.category === "all" || e.category === "close-friends");
 
   return (
     <PageTransition>
       <div className="min-h-screen bg-background pb-24">
         <div className="px-6 pt-14 max-w-lg mx-auto">
-          <h1 className="font-display text-3xl font-medium text-foreground mb-6">
+          <h1 className="font-display text-3xl font-medium text-foreground mb-8">
             Your Itinerary
           </h1>
 
-          {/* Filter */}
-          <div className="flex gap-2 mb-8 sticky top-0 z-10 bg-background py-3">
-            {(["personalized", "all"] as const).map((f) => (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                className={`h-9 px-5 rounded-full text-xs uppercase tracking-[0.12em] font-semibold font-sans transition-all ${
-                  filter === f
-                    ? "bg-foreground text-background"
-                    : "bg-card text-muted-foreground shadow-paper"
-                }`}
-              >
-                {f === "personalized" ? "For You" : "All Events"}
-              </button>
-            ))}
-          </div>
 
           {/* Timeline */}
           <div className="relative">
