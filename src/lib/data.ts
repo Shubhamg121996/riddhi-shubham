@@ -1,6 +1,5 @@
 import haldiImg from "@/assets/event-haldi.jpg";
 import weddingImg from "@/assets/event-wedding.jpg";
-import receptionImg from "@/assets/event-reception.jpg";
 import varmalaImg from "@/assets/event-varmala.jpg";
 import ringCeremonyImg from "@/assets/event-ring-ceremony.jpg";
 
@@ -208,33 +207,22 @@ export const events: WeddingEvent[] = [
 
   },
   {
-    id: "varmala",
-    name: "Varmala",
+    id: "varmala-reception",
+    name: "Varmala & Grand Reception",
     date: "December 5, 2026",
-    time: "7:30 PM",
+    time: "7:30 PM Onwards",
     venue: "Lawn",
     venueAddress,
     dressCode: "Traditional",
-    description: "The grand Varmala ceremony — the exchange of flower garlands between the bride and groom under the open sky, symbolizing their acceptance of each other. A joyous moment filled with music, lights, and excitement.",
+    description: "The grand Varmala ceremony — the exchange of flower garlands between the bride and groom under the open sky, symbolizing their acceptance of each other — followed by an evening of elegance, fine dining, and dancing under the stars as we celebrate the newlyweds.",
     image: varmalaImg,
     category: "all",
     mapUrl: lotusResortMapUrl,
     meal: "Dinner",
-    notes: "Dinner served at the Grand Reception that follows.",
-  },
-  {
-    id: "reception",
-    name: "Grand Reception",
-    date: "December 5, 2026",
-    time: "8:00 PM Onwards",
-    venue: "Lawn",
-    venueAddress,
-    dressCode: "Traditional",
-    description: "An evening of elegance, fine dining, and dancing under the stars. Celebrate the newlyweds with cocktails, a grand dinner, and unforgettable memories.",
-    image: receptionImg,
-    category: "all",
-    mapUrl: lotusResortMapUrl,
-    meal: "Dinner",
+    timeline: [
+      { time: "7:30 PM", title: "Varmala" },
+      { time: "8:00 PM", title: "Grand Reception" },
+    ],
     menu: [
       {
         title: "Mocktails, Shakes & Juices",
