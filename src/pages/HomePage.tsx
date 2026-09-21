@@ -56,7 +56,7 @@ const HomePage = () => {
     })();
   }, []);
 
-  const nextEvent = events.find((e) => e.id === "wedding");
+  const nextEvent = events.find((e) => e.id === "wedding")!;
   const hasAttendingRsvp = rsvp?.attendance === "Yes";
   const hasDeclinedRsvp = rsvp?.attendance === "No";
 
