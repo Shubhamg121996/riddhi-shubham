@@ -18,7 +18,7 @@ const ARRIVAL_DATES = [
   {
     id: "5 December",
     title: "5 December",
-    sub: "Morning & Afternoon – Wedding Ceremony · Night – Reception",
+    sub: "Morning & Afternoon – Wedding Ceremony · Night – Varmala & Grand Reception",
   },
 ];
 
