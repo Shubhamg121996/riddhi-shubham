@@ -1,5 +1,4 @@
 import haldiImg from "@/assets/event-haldi.jpg";
-import mehendiImg from "@/assets/event-mehendi.jpg";
 import weddingImg from "@/assets/event-wedding.jpg";
 import receptionImg from "@/assets/event-reception.jpg";
 import varmalaImg from "@/assets/event-varmala.jpg";
@@ -104,39 +103,27 @@ export const events: WeddingEvent[] = [
     ],
   },
   {
-    id: "ring-ceremony",
-    name: "Ring Ceremony",
+    id: "ring-ceremony-sangeet",
+    name: "Ring Ceremony & Sangeet",
     date: "December 4, 2026",
-    time: "6:00 PM",
+    time: "6:30 PM Onwards",
     venue: "Lavender Banquet Hall, Ground Floor",
     venueAddress,
     dressCode: "Semi Formals / Vibrant Colours",
-    description: "The auspicious exchange of rings, marking the official engagement of the couple. A beautiful moment of commitment surrounded by family and friends, accompanied by evening snacks and tea.",
+    description: "The auspicious exchange of rings marking the official engagement of the couple, followed by an enchanting evening of live music and dance performances. Celebrate the union with joyful sangeet performances by family and friends.",
     image: ringCeremonyImg,
     category: "all",
     mapUrl: lotusResortMapUrl,
-    meal: "Evening Snacks & Tea",
+    meal: "Evening Snacks & Tea, Dinner",
+    timeline: [
+      { time: "6:30 PM", title: "Ring Ceremony" },
+      { time: "7:00 PM", title: "Sangeet" },
+    ],
     menu: [
       {
         title: "Hi-Tea",
         items: ["Mix Bhajiya", "Green Chutney", "Tea", "Coffee"],
       },
-    ],
-  },
-  {
-    id: "mehendi",
-    name: "Sangeet",
-    date: "December 4, 2026",
-    time: "7:00 PM Onwards",
-    venue: "Lavender Banquet Hall, Ground Floor",
-    venueAddress,
-    dressCode: "Semi Formals / Vibrant Colours",
-    description: "An enchanting evening of live music, dance performances, and delicious food. Celebrate the union with joyful sangeet performances by family and friends.",
-    image: mehendiImg,
-    category: "all",
-    mapUrl: lotusResortMapUrl,
-    meal: "Dinner",
-    menu: [
       {
         title: "Welcome & Soup",
         items: ["Veg Hot-n-Sour Soup", "Fried Noodles", "Virgin Mojito"],
@@ -183,19 +170,10 @@ export const events: WeddingEvent[] = [
     category: "all",
     mapUrl: lotusResortMapUrl,
     timeline: [
-      { time: "Day 1 — Dec 4", title: "" },
-      { time: "12:00 PM", title: "Haldi" },
-      { time: "2:00 PM", title: "Pool Party" },
-      { time: "6:30 PM", title: "Ring Ceremony" },
-      { time: "7:00 PM", title: "Sangeet" },
-      { time: "Day 2 — Dec 5", title: "" },
       { time: "10:00 AM", title: "Baraat" },
       { time: "11:30 AM", title: "Shubo Drishti" },
       { time: "12:00 PM", title: "Mala Badal, Saat Paak, Sampradaan, Sindoor Daan" },
       { time: "2:00 PM", title: "Phere & Kanyadaan" },
-      { time: "7:00 PM", title: "Jay Mala" },
-      { time: "8:00 PM", title: "Reception" },
-      { time: "11:00 PM", title: "Vidai" },
     ],
     menu: [
       {
