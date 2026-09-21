@@ -21,7 +21,7 @@ const TimelinePage = () => {
           <div className="relative">
             <div className="absolute left-3 top-2 bottom-2 w-[1px] bg-border" />
 
-            {filteredEvents.map((event, i) => (
+            {events.map((event, i) => (
               <motion.div
                 key={event.id}
                 className="ml-10 mb-10 cursor-pointer"
