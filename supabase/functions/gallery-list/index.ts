@@ -37,10 +37,13 @@ Deno.serve(async (req) => {
       }
       const data = await res.json();
       for (const f of data.files ?? []) {
+        // Photos without uploader metadata were added directly by the couple —
+        // attribute them to Shubham.
+        const uploader = (f.properties?.uploadedBy ?? f.description ?? '').trim();
         files.push({
           id: f.id,
           name: f.name,
-          uploadedBy: f.properties?.uploadedBy ?? f.description ?? '',
+          uploadedBy: uploader || 'Shubham',
           createdTime: f.createdTime,
         });
       }
