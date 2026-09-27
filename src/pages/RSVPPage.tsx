@@ -8,6 +8,7 @@ import { fetchExistingRsvp, submitRsvp, RsvpPayload } from "@/lib/rsvp";
 import { toast } from "@/hooks/use-toast";
 
 const ARRIVAL_DATES = [
+  { id: "1 December", title: "1 December", sub: "Arriving ahead of the celebrations" },
   { id: "2 December", title: "2 December", sub: "Arriving early" },
   { id: "3 December", title: "3 December", sub: "Arriving a day before the celebrations" },
   {
