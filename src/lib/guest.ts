@@ -18,7 +18,7 @@ export async function validateInviteCode(code: string): Promise<Guest | null> {
       .map((row) =>
         row.split(",").map((cell) => cell.replace(/^"|"$/g, "").trim())
       )
-      .filter((row) => row.length >= 3 && row[0]);
+      .filter((row) => row[0]);
 
     const entered = code.trim().toUpperCase();
 

@@ -23,7 +23,7 @@ const LoginPage = () => {
       saveGuest(guest);
       navigate("/home");
     } else {
-      setError("Invalid invite code. Please try again.");
+      setError("We couldn't find that name. Please check the spelling and try again.");
     }
     setLoading(false);
   };
