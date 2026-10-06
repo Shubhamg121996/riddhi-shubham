@@ -16,6 +16,9 @@ import RSVPPage from "./pages/RSVPPage";
 
 const queryClient = new QueryClient();
 
+const RequireGuest = ({ children }: { children: JSX.Element }) =>
+  isLoggedIn() ? children : <Navigate to="/" replace />;
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
