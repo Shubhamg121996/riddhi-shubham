@@ -22,13 +22,15 @@ export async function validateInviteCode(code: string): Promise<Guest | null> {
 
     const entered = code.trim().toUpperCase();
 
-    // Column C holds the access code; column A holds the guest name.
-    const match = rows.find(
-      (row) => (row[2] || "").trim().toUpperCase() === entered
-    );
+    // Column A holds the guest name; the access code is the first name
+    // (first word) of that name, matched case-insensitively, any length.
+    const match = rows.find((row) => {
+      const firstName = (row[0] || "").trim().split(/\s+/)[0] || "";
+      return firstName.toUpperCase() === entered;
+    });
 
     if (match) {
-      return { name: match[0], code: (match[2] || "").trim().toUpperCase() };
+      return { name: match[0], code: entered };
     }
     return null;
   } catch (err) {

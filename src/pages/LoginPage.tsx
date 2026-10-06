@@ -59,19 +59,18 @@ const LoginPage = () => {
         </h1>
 
         <p className="text-sm text-muted-foreground mb-8 font-sans">
-          Enter your invite code to continue
+          Enter your first name to continue
         </p>
 
         <input
           type="text"
-          maxLength={10}
           value={code}
           onChange={(e) => {
             setCode(e.target.value.replace(/[^a-zA-Z]/g, "").toUpperCase());
             setError("");
           }}
-          placeholder="• • • •"
-          className="w-full text-center text-4xl tracking-[0.35em] font-display bg-transparent border-b-2 border-primary pb-4 mb-3 focus:outline-none focus:border-foreground transition-colors placeholder:text-border"
+          placeholder="FIRST NAME"
+          className="w-full text-center text-3xl tracking-[0.25em] font-display bg-transparent border-b-2 border-primary pb-4 mb-3 focus:outline-none focus:border-foreground transition-colors placeholder:text-border"
         />
 
 
