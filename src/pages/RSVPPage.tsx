@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Minus, Plus, Heart, Loader2 } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
-import { getGuestName, isLoggedIn } from "@/lib/guest";
+import { getGuestCode, getGuestName, isLoggedIn } from "@/lib/guest";
 import { fetchExistingRsvp, submitRsvp, RsvpPayload } from "@/lib/rsvp";
 import { toast } from "@/hooks/use-toast";
 
@@ -46,10 +46,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const RSVPPage = () => {
   const navigate = useNavigate();
   const guestName = getGuestName();
-  const code =
-    typeof window !== "undefined"
-      ? localStorage.getItem("wedding_guest_code") ?? ""
-      : "";
+  const code = getGuestCode();
 
   const [step, setStep] = useState(0);
   const [loading, setLoading] = useState(true);

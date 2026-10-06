@@ -41,19 +41,27 @@ export async function validateInviteCode(code: string): Promise<Guest | null> {
 
 
 export function saveGuest(guest: Guest) {
-  localStorage.setItem(GUEST_NAME_KEY, guest.name);
-  localStorage.setItem(GUEST_CODE_KEY, guest.code);
+  sessionStorage.setItem(GUEST_NAME_KEY, guest.name);
+  sessionStorage.setItem(GUEST_CODE_KEY, guest.code);
+  localStorage.removeItem(GUEST_NAME_KEY);
+  localStorage.removeItem(GUEST_CODE_KEY);
 }
 
 export function getGuestName(): string {
-  return localStorage.getItem(GUEST_NAME_KEY) || "Guest";
+  return sessionStorage.getItem(GUEST_NAME_KEY) || "Guest";
+}
+
+export function getGuestCode(): string {
+  return sessionStorage.getItem(GUEST_CODE_KEY) || "";
 }
 
 export function isLoggedIn(): boolean {
-  return !!localStorage.getItem(GUEST_CODE_KEY);
+  return !!sessionStorage.getItem(GUEST_CODE_KEY);
 }
 
 export function logoutGuest() {
+  sessionStorage.removeItem(GUEST_NAME_KEY);
+  sessionStorage.removeItem(GUEST_CODE_KEY);
   localStorage.removeItem(GUEST_NAME_KEY);
   localStorage.removeItem(GUEST_CODE_KEY);
 }
