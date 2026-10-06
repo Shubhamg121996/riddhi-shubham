@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-couple.jpg";
-import { validateInviteCode, saveGuest } from "@/lib/guest";
+import { validateInviteCode, saveGuest, isLoggedIn } from "@/lib/guest";
 
 const LoginPage = () => {
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  if (isLoggedIn()) return <Navigate to="/home" replace />;
 
   const handleSubmit = async () => {
     if (code.trim().length < 2) return;

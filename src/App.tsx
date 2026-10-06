@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence } from "framer-motion";
+import { isLoggedIn } from "@/lib/guest";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import TimelinePage from "./pages/TimelinePage";
@@ -15,6 +16,9 @@ import RSVPPage from "./pages/RSVPPage";
 
 const queryClient = new QueryClient();
 
+const RequireGuest = ({ children }: { children: JSX.Element }) =>
+  isLoggedIn() ? children : <Navigate to="/" replace />;
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -24,12 +28,12 @@ const App = () => (
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/timeline" element={<TimelinePage />} />
-            <Route path="/event/:id" element={<EventDetailPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
-            <Route path="/story" element={<StoryPage />} />
-            <Route path="/rsvp" element={<RSVPPage />} />
+            <Route path="/home" element={<RequireGuest><HomePage /></RequireGuest>} />
+            <Route path="/timeline" element={<RequireGuest><TimelinePage /></RequireGuest>} />
+            <Route path="/event/:id" element={<RequireGuest><EventDetailPage /></RequireGuest>} />
+            <Route path="/gallery" element={<RequireGuest><GalleryPage /></RequireGuest>} />
+            <Route path="/story" element={<RequireGuest><StoryPage /></RequireGuest>} />
+            <Route path="/rsvp" element={<RequireGuest><RSVPPage /></RequireGuest>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
