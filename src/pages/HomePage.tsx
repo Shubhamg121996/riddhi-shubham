@@ -4,7 +4,7 @@ import { MapPin, Clock, Sparkles, Calendar, Pencil, Check } from "lucide-react";
 import heroAsset from "@/assets/home-bg.png.asset.json";
 const heroImg = heroAsset.url;
 import { coupleName, weddingDate, events } from "@/lib/data";
-import { getGuestName } from "@/lib/guest";
+import { getGuestCode, getGuestName } from "@/lib/guest";
 import { fetchExistingRsvp, RsvpPayload } from "@/lib/rsvp";
 import PageTransition from "@/components/PageTransition";
 import BottomNav from "@/components/BottomNav";
@@ -35,10 +35,7 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    const code =
-      typeof window !== "undefined"
-        ? localStorage.getItem("wedding_guest_code") ?? ""
-        : "";
+    const code = getGuestCode();
     if (!code) {
       setRsvpLoading(false);
       return;
