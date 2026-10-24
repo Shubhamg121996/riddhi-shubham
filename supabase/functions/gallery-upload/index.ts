@@ -1,7 +1,7 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
 const UPLOAD_GATEWAY = 'https://connector-gateway.lovable.dev/google_drive/upload/drive/v3/files';
-const FOLDER_ID = '1xIWkmIG0L9mAvU9aGxuxoX-RCZylWnmm';
+const FOLDER_ID = '1XxcM8nmlqOs1TmRqfJMejgUrDR9juDGQ';
 
 function gwHeaders() {
   return {
