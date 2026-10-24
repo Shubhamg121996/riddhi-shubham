@@ -29,9 +29,6 @@ export interface WeddingEvent {
   meal?: string;
   timeline?: TimelineStep[];
   menu?: MenuSection[];
-  displayName?: string;
-  displayDate?: string;
-  displayTime?: string;
 }
 
 export interface GalleryPhoto {
@@ -161,12 +158,9 @@ export const events: WeddingEvent[] = [
   },
   {
     id: "wedding",
-    name: "Wedding Celebration",
-    date: "December 4 – 6, 2026",
-    time: "Dec 4, 9:00 AM – Dec 6, 9:00 AM",
-    displayName: "Wedding Ceremony",
-    displayDate: "December 5, 2026",
-    displayTime: "10:00 AM – 4:00 PM",
+    name: "Wedding Ceremony",
+    date: "December 5, 2026",
+    time: "10:00 AM – 4:00 PM",
     venue: "Lavender Banquet Hall",
     venueAddress,
     dressCode: "Formal Indian / Traditional",
@@ -321,31 +315,31 @@ export const coupleStory: CoupleStoryItem[] = [
     year: "2022",
     title: "How We Met",
     description:
-      "Beneath the emerald canopy of IIT Madras, two strangers met. Friendship bloomed under starlit skies at the KV court, where countless conversations quietly became the beginning of our forever.",
+      "We met at IIT Madras. Nothing dramatic — just two people who kept running into each other until we realised the best part of the day was the chat at the KV court. That's how it started.",
   },
   {
     year: "March 2022",
     title: "Our First Date",
     description:
-      "The sea at Sholinganallur witnessed our first adventure together. As the waves danced ashore, our hands found each other — and our hearts never let go.",
+      "Sholinganallur beach. We hadn't planned much — a walk, the sea, the usual nervous chatter. Somewhere between the waves, our hands found each other. Neither of us let go after that.",
   },
   {
     year: "2022 – 2025",
     title: "The Journey Together",
     description:
-      "From trekking the steep hills of Parvathamalai to catch a breathtaking sunrise, to riding through Kerala's winding roads, every adventure brought new memories, new laughter, and new dreams. Through every high and low, we didn't just travel the world — we grew together, hand in hand.",
+      "Three years of doing everything together. We climbed Parvathamalai before dawn to catch the sunrise, rode through Kerala's winding roads, and turned every ordinary weekend into a small adventure. Somewhere in all that, 'you and me' quietly became 'us'.",
   },
   {
     year: "2026",
     title: "The Proposal",
     description:
-      "One question, one heartbeat, one unforgettable \"Yes.\" In that moment, every road we had walked together led to a promise — to choose each other today, tomorrow, and for all the years to come.",
+      "Honestly, we both saw it coming. But when the question was finally asked, the answer was the easiest 'yes' either of us has ever said.",
   },
   {
     year: "2026",
     title: "Forever Begins",
     description:
-      "And now, surrounded by the people we love most, we begin the greatest chapter of all.",
+      "And now, with all of you around us, we get to start the part we've been waiting for.",
   },
 ];
 
