@@ -26,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <BackgroundMusic />
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<LoginPage />} />
