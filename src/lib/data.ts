@@ -49,7 +49,7 @@ export interface CoupleStoryItem {
 
 
 export const coupleName = "Riddhi & Shubham";
-export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1xIWkmIG0L9mAvU9aGxuxoX-RCZylWnmm?usp=sharing";
+export const googleDriveGalleryUrl = "https://drive.google.com/drive/folders/1XxcM8nmlqOs1TmRqfJMejgUrDR9juDGQ?usp=sharing";
 
 export const weddingDate = new Date("2026-12-04T09:00:00");
 
