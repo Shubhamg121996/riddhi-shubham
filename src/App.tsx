@@ -13,6 +13,7 @@ import GalleryPage from "./pages/GalleryPage";
 import StoryPage from "./pages/StoryPage";
 import NotFound from "./pages/NotFound";
 import RSVPPage from "./pages/RSVPPage";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <BackgroundMusic />
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<LoginPage />} />
